@@ -5,11 +5,8 @@ import classNames from "classnames";
 import { useState } from "react";
 
 export default function Order() {
-  const [isActive, setIsActive] = useState(false);
   return (
     <button
-      onClick={() => setIsActive(!isActive)}
-      onBlur={() => setIsActive(!isActive)}
       className={classNames({
         [style.button]: true,
       })}
@@ -23,7 +20,7 @@ export default function Order() {
       <div
         className={classNames({
           [style.button__options]: true,
-          [style.optionsActive]: isActive,
+          [style.optionsActive]: false,
         })}
       >
         {OptionsList.map((item) => (

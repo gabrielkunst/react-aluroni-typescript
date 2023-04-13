@@ -1,10 +1,26 @@
 import style from "./Products.module.scss";
 import productsList from "../../../data/ItemsList.json";
+import { Ifilter } from "../../../types/Filter";
+import { useState, useEffect } from "react";
 
-export default function Products() {
+interface Props {
+  searchValue: string;
+  filterValue: Ifilter | undefined;
+}
+
+export default function Products({ searchValue, filterValue }: Props) {
+  const [list, setList] = useState(productsList);
+
+  useEffect(() => {
+    const newList = productsList.filter((item) =>
+      item.title.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setList(newList);
+  }, [searchValue]);
+
   return (
     <>
-      {productsList.map((item) => (
+      {list.map((item) => (
         <article className={style.card} key={item.id}>
           <div className={style.card__image}>
             <img src={item.photo} alt={item.title} />
