@@ -1,0 +1,70 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/variables.scss";
+
+.wrapper {
+  &__nav {
+    background-color: $bg-dark;
+    min-height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $padding-horizontal;
+
+    img {
+      width: min(35vw, 12rem);
+    }
+
+    ul {
+      display: none !important;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+
+      a {
+        text-decoration: none;
+        font-size: max(1vw);
+        color: $clr--white;
+        letter-spacing: 0.2rem;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 3px;
+        transition: border-color 0.5s ease;
+
+        &:hover {
+          border-color: $clr--red;
+        }
+      }
+    }
+  }
+
+  &__header {
+    min-height: 7rem;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+      url("../../../public/assets/header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    div {
+      font-size: max(1.4rem, 1.2vw);
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .wrapper {
+    &__nav {
+      justify-content: space-between;
+
+      ul {
+        display: flex !important;
+      }
+    }
+  }
+}

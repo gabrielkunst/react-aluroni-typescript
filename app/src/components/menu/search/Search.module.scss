@@ -1,0 +1,30 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.search {
+  background-color: $bg-dark--lighter;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 30%;
+  width: fit-content;
+  border-radius: 1rem;
+
+  input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border: none;
+    outline: none;
+    background: none;
+    color: $clr--white;
+    width: 100%;
+  }
+
+  span {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}

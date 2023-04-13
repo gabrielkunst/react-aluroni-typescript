@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.filters {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &__button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: $bg-dark--lighter;
+    color: $clr--white;
+    border-radius: 1rem;
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.active {
+  background-color: $clr--red;
+}

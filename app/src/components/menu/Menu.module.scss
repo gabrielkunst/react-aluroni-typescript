@@ -1,0 +1,29 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/variables.scss";
+
+.menu {
+  padding: 5rem $padding-horizontal;
+  background-color: $bg-dark--light;
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+}

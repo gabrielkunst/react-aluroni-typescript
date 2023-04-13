@@ -1,0 +1,10 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/variables.scss";
+
+.footer {
+  padding: 3rem $padding-horizontal;
+  background-color: $bg-dark;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
