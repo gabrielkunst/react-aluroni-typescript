@@ -4,7 +4,7 @@
 .wrapper {
   &__nav {
     background-color: $bg-dark;
-    min-height: 8rem;
+    height: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,6 @@
   }
 
   &__header {
-    min-height: 7rem;
     height: 13vh;
     display: flex;
     justify-content: center;

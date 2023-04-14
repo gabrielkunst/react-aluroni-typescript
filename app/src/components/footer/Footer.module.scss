@@ -7,4 +7,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 8rem;
+
+  img {
+    width: min(35vw, 12rem);
+  }
 }

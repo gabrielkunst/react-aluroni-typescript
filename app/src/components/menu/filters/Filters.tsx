@@ -4,19 +4,24 @@ import style from "./Filters.module.scss";
 import { Ifilter } from "../../../types/Filter";
 
 interface Props {
-  setFilterValue: (item: Ifilter) => void;
+  filterValue: string;
+  setFilterValue: (item: string) => void;
 }
 
-export default function Filters({ setFilterValue }: Props) {
+export default function Filters({ filterValue, setFilterValue }: Props) {
   return (
     <div className={style.filters}>
       {FilterList.map((item) => (
         <button
-          onClick={() => setFilterValue(item)}
+          onClick={() =>
+            filterValue === item.label
+              ? setFilterValue("")
+              : setFilterValue(item.label)
+          }
           key={item.id}
           className={classNames({
             [style.filters__button]: true,
-            [style.active]: false,
+            [style.active]: filterValue === item.label ? true : false,
           })}
         >
           {item.label}

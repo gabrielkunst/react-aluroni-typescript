@@ -4,6 +4,7 @@
 .menu {
   padding: 5rem $padding-horizontal;
   background-color: $bg-dark--light;
+  min-height: calc(100vh - (16rem + 13vh));
 
   h1 {
     font-size: 3rem;
