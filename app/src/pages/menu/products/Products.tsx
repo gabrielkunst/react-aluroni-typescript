@@ -1,6 +1,5 @@
 import style from "./Products.module.scss";
-import productsList from "../../../data/ItemsList.json";
-import { Ifilter } from "../../../types/Filter";
+import productsList from "../../../data/ProductsList.json";
 import { useState, useEffect } from "react";
 
 interface Props {
