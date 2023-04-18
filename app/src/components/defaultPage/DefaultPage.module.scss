@@ -1,2 +1,8 @@
 @import "../../styles/breakpoints.scss";
 @import "../../styles/variables.scss";
+
+.mainContent {
+  padding: $padding-vertical $padding-horizontal;
+  background-color: $bg-dark--light;
+  min-height: calc(100vh - (11rem + 15rem + 13rem));
+}

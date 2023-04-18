@@ -7,7 +7,7 @@ export default function DefaultPage() {
   return (
     <main>
       <Header />
-      <div>
+      <div className={style.mainContent}>
         <Outlet />
       </div>
       <Footer />

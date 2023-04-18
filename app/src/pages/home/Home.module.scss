@@ -1,2 +1,70 @@
 @import "../../styles/breakpoints.scss";
 @import "../../styles/variables.scss";
+
+.home {
+  .products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+    padding: 1rem;
+
+    .item {
+      flex: 1 1 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: $bg-dark--lighter;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      opacity: 0.5;
+      border: 2px solid transparent;
+      min-width: 15rem;
+
+      img {
+        border-radius: 2rem;
+      }
+
+      a {
+        background-color: $clr--red;
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        font-size: max(1.2vw, 1.2rem);
+        color: $clr--white;
+        letter-spacing: 0.2rem;
+      }
+      &:hover {
+        opacity: 1;
+        border-color: $clr--red;
+      }
+    }
+  }
+  .info {
+    padding-top: 2rem;
+    &__image {
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+        url("../../assets/nossa_casa.png") center/cover no-repeat;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1000px;
+      min-height: 15rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border-radius: 2rem;
+      overflow: hidden;
+      font-size: max(1vw, 1.5rem);
+      text-align: center;
+      letter-spacing: 0.2rem;
+      padding: 1rem;
+    }
+  }
+}

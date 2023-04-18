@@ -4,6 +4,8 @@ import DefaultPage from "./components/defaultPage/DefaultPage.tsx";
 import Home from "./pages/home/Home.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
 import About from "./pages/about/About.tsx";
+import NotFound from "./pages/notfound/NotFound.tsx";
+import "./index.scss";
 
 export default function AppRouter() {
   return (
@@ -16,6 +18,7 @@ export default function AppRouter() {
             <Route path="cardapio" element={<Menu />} />
             <Route path="sobre" element={<About />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </main>

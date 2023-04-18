@@ -1,2 +1,49 @@
 @import "../../styles/breakpoints.scss";
 @import "../../styles/variables.scss";
+
+.about__images {
+  width: 100%;
+  min-height: 30rem;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  div {
+    flex: 1 1 0%;
+    padding: 2rem;
+    min-height: 30rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+      url("../../assets/about/massa2.png");
+    min-width: min(25rem, 50vw);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $clr--white !important;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    p {
+      letter-spacing: 0.1rem;
+      font-size: max(1vw, 1.5rem);
+      text-align: justify;
+      text-align-last: center;
+    }
+  }
+
+  div:first-of-type {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+      url("../../assets/about/casa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  div:last-of-type {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+      url("../../assets/about/massa1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

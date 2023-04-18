@@ -19,3 +19,9 @@ body {
   background-color: $bg-dark;
   color: $clr--white;
 }
+
+#root > main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
+}

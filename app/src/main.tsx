@@ -4,5 +4,5 @@ import "./index.scss";
 import Router from "./routes";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <Router />
+	<Router />
 );

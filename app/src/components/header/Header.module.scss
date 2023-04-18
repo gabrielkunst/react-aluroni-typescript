@@ -2,18 +2,20 @@
 @import "../../styles/variables.scss";
 
 .header {
-  height: 13vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 15rem;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
     url("../../../public/assets/header.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: $padding-vertical $padding-horizontal;
 
-  div {
-    font-size: max(1.4rem, 1.2vw);
+  &__content {
     letter-spacing: 0.2rem;
+    font-size: max(1.7vw, 1.5rem);
   }
 }
