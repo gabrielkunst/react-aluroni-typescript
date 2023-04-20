@@ -1,6 +1,7 @@
 import style from "./Products.module.scss";
 import productsList from "../../../data/ProductsList.json";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   searchValue: string;
@@ -14,6 +15,7 @@ export default function Products({
 	orderValue,
 }: Props) {
 	const [list, setList] = useState(productsList);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const newList = productsList.filter(
@@ -39,7 +41,11 @@ export default function Products({
 		<>
 			{list.length > 0 ? (
 				list.map((item) => (
-					<article className={style.card} key={item.id}>
+					<article
+						className={style.card}
+						key={item.id}
+						onClick={() => navigate(`pratos/${item.id}`)}
+					>
 						<div className={style.card__image}>
 							<img src={item.photo} alt={item.title} />
 						</div>
